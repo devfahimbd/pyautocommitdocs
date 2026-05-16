@@ -25,10 +25,10 @@
             --primary-dark: #0f5a37;
             --primary-light: #eafaf1;
             --primary-soft: #d4f0e2;
-            --accent: #2b9b60;
             --shadow-premium: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
             --border-soft: #e2f0e8;
         }
+        /* Responsive Navbar */
         .navbar-premium {
             backdrop-filter: blur(12px);
             background: rgba(255, 255, 255, 0.96);
@@ -37,20 +37,20 @@
         }
         .logo-icon {
             background: linear-gradient(135deg, var(--primary-light), var(--primary-soft));
-            width: 44px;
-            height: 44px;
-            border-radius: 18px;
+            width: 40px;
+            height: 40px;
+            border-radius: 14px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: var(--primary);
         }
         .btn-premium {
             background: var(--primary);
             border: none;
             border-radius: 44px;
-            padding: 8px 26px;
+            padding: 8px 24px;
             font-weight: 600;
             color: white;
             transition: all 0.2s ease;
@@ -58,116 +58,116 @@
         .btn-premium:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(30,122,74,0.25);
         }
         .hero-premium {
             background: radial-gradient(ellipse at 20% 30%, rgba(220, 245, 230, 0.5), #ffffff);
-            padding: 90px 0 80px;
+            padding: 60px 0 50px;
             border-bottom: 1px solid var(--border-soft);
         }
         .install-chip {
-            background: #112e24;
+            background: #0d2b20;
             border-radius: 80px;
-            padding: 14px 28px;
+            padding: 12px 24px;
             display: inline-flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
+            flex-wrap: wrap;
             box-shadow: var(--shadow-premium);
+        }
+        .install-chip code {
+            background: transparent;
+            color: #d4f0e2;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
         .feature-card {
             background: white;
-            border-radius: 28px;
-            padding: 30px 24px;
+            border-radius: 24px;
+            padding: 24px 20px;
             transition: all 0.25s ease;
             border: 1px solid rgba(0,0,0,0.03);
             height: 100%;
             box-shadow: 0 5px 15px rgba(0,0,0,0.02);
         }
         .feature-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-5px);
             border-color: var(--primary-soft);
             box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.08);
         }
         .code-window {
-            background: #0f201c;
-            border-radius: 28px;
-            padding: 28px;
-            color: #caf0e3;
+            background: #0b1f1a;
+            border-radius: 24px;
+            padding: 24px;
+            color: #e2f3ec;
             font-family: 'SF Mono', 'Fira Code', monospace;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             box-shadow: var(--shadow-premium);
-            border: 1px solid #1f3a32;
+            border: 1px solid #2a4a3e;
             overflow-x: auto;
         }
         .terminal-preview {
             background: #0b1815;
-            border-radius: 28px;
-            padding: 30px;
-            font-family: monospace;
-            font-size: 0.85rem;
+            border-radius: 24px;
+            padding: 24px;
+            font-family: 'SF Mono', monospace;
+            font-size: 0.8rem;
             color: #c9f0e1;
             border-left: 4px solid var(--primary);
+            overflow-x: auto;
         }
         .lang-cloud span {
             background: #ecf9f0;
-            padding: 8px 20px;
-            border-radius: 60px;
-            font-size: 0.85rem;
-            margin: 8px;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            margin: 6px;
             display: inline-block;
             font-weight: 500;
             color: #1c5a3e;
         }
         .author-card-premium {
             background: linear-gradient(125deg, #f5fef9, #ffffff);
-            border-radius: 48px;
-            padding: 38px;
+            border-radius: 32px;
+            padding: 28px;
             box-shadow: var(--shadow-premium);
             border: 1px solid #e2f0e8;
         }
         .author-img-circle {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid white;
-            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 25px -8px rgba(0,0,0,0.1);
         }
         .dropdown-menu-premium {
-            border-radius: 24px;
+            border-radius: 20px;
             border: none;
             box-shadow: 0 20px 35px rgba(0,0,0,0.08);
-            padding: 0.6rem 0;
+            padding: 0.5rem 0;
         }
         .badge-premium {
             background: var(--primary-light);
             color: var(--primary-dark);
-            padding: 7px 18px;
-            border-radius: 60px;
+            padding: 5px 14px;
+            border-radius: 50px;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
         .section-header {
-            margin-bottom: 48px;
+            margin-bottom: 35px;
         }
         .section-header h2 {
+            font-size: 1.8rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            background: linear-gradient(120deg, #1a4d3a, var(--primary));
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            display: inline-block;
         }
         .table-premium {
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            border-radius: 20px;
+            overflow-x: auto;
+            display: block;
         }
-        .table-premium th {
-            background: #eef5f1;
-            border-bottom: none;
-            font-weight: 600;
+        .table-premium th, .table-premium td {
+            padding: 12px 16px;
         }
         footer {
             background: #f8fdfa;
@@ -175,32 +175,130 @@
         }
         .icon-bg-round {
             background: var(--primary-light);
-            width: 54px;
-            height: 54px;
-            border-radius: 30px;
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
         .icon-bg-round i {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--primary);
         }
         .accordion-button:not(.collapsed) {
             background-color: var(--primary-light);
             color: var(--primary-dark);
         }
-        code {
-            background: #eef5f1;
-            padding: 2px 8px;
-            border-radius: 8px;
-            color: #1e7a4a;
+        /* Command block styles with working copy buttons */
+        .command-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0f2a22;
+            padding: 10px 16px;
+            border-radius: 14px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+            transition: all 0.2s;
         }
-        pre code {
-            background: transparent;
-            color: inherit;
-            padding: 0;
+        .command-block:hover {
+            background: #12382e;
+        }
+        .command-text {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            color: #d6f5e8;
+            font-size: 0.85rem;
+            word-break: break-all;
+            flex: 1;
+        }
+        .command-text .prompt {
+            color: #6fcf97;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        .copy-cmd-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 40px;
+            padding: 5px 14px;
+            font-size: 0.7rem;
+            transition: 0.2s;
+            color: #c5f0e1;
+            cursor: pointer;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .copy-cmd-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .toast-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            z-index: 9999;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            animation: fadeInUp 0.3s ease;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-premium {
+                padding: 40px 0 35px;
+            }
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+            .install-chip {
+                padding: 10px 18px;
+            }
+            .install-chip code {
+                font-size: 0.75rem;
+            }
+            .command-text {
+                font-size: 0.75rem;
+            }
+            .copy-cmd-btn {
+                padding: 4px 12px;
+                font-size: 0.65rem;
+            }
+            .author-card-premium {
+                padding: 20px;
+            }
+            .author-img-circle {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        @media (max-width: 480px) {
+            .command-block {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .copy-cmd-btn {
+                align-self: flex-end;
+            }
+            .feature-card {
+                padding: 18px;
+            }
         }
     </style>
 </head>
@@ -209,7 +307,7 @@
 <!-- Premium Navbar -->
 <nav class="navbar navbar-expand-lg navbar-premium sticky-top">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-3 fw-bold fs-3" href="#">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-4" href="#">
             <div class="logo-icon"><i class="fas fa-code-branch"></i></div>
             <span>Fahim <span style="color: var(--primary);">Auto Commit</span></span>
         </a>
@@ -242,18 +340,18 @@
 <!-- Hero Section -->
 <div class="hero-premium">
     <div class="container">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-4">
             <div class="col-lg-7 text-center text-lg-start">
-                <div class="mb-3"><span class="badge-premium"><i class="fas fa-microchip me-2"></i>Next‑gen Git Automation · 50+ languages</span></div>
-                <h1 class="display-4 fw-bold" style="color: #0a2c21;"><i class="fas fa-robot me-3" style="color: var(--primary);"></i>Fahim Auto Commit</h1>
-                <p class="fs-3 text-dark-emphasis mb-3"><i class="fas fa-infinity me-2"></i>Universal Git automation CLI</p>
-                <p class="lead text-muted mb-4"><i class="fas fa-magic me-2"></i>Automatically create, manage and push commits with intelligent progress bars, custom templates, and bulletproof safety.</p>
+                <div class="mb-2"><span class="badge-premium"><i class="fas fa-microchip me-2"></i>Next‑gen Git Automation · 50+ languages</span></div>
+                <h1 class="display-5 fw-bold" style="color: #0a2c21;"><i class="fas fa-robot me-2" style="color: var(--primary);"></i>Fahim Auto Commit</h1>
+                <p class="fs-4 text-dark-emphasis mb-2"><i class="fas fa-infinity me-2"></i>Universal Git automation CLI</p>
+                <p class="lead text-muted mb-3">Automatically create, manage and push commits with intelligent progress bars, custom templates, and bulletproof safety.</p>
                 <div class="install-chip">
-                    <i class="fas fa-terminal fa-xl" style="color:#bcf0dc;"></i>
-                    <code class="text-white fs-6" id="dynamicInstallCmd">pip install fahim-autocommit</code>
-                    <button class="btn btn-sm text-white" id="premiumCopyBtn"><i class="fas fa-copy fa-lg"></i></button>
+                    <i class="fas fa-terminal fa-lg" style="color:#bcf0dc;"></i>
+                    <code id="dynamicInstallCmd" style="background:transparent; color:#e8f7ef;">pip install fahim-autocommit</code>
+                    <button class="btn btn-sm text-white" id="premiumCopyBtn" style="background:rgba(255,255,255,0.1); border-radius:40px;"><i class="fas fa-copy"></i> Copy</button>
                 </div>
-                <div class="mt-4 d-flex flex-wrap gap-4 justify-content-center justify-content-lg-start">
+                <div class="mt-3 d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
                     <span><i class="fas fa-check-circle text-success me-1"></i> Python 3.8+</span>
                     <span><i class="fab fa-windows text-primary me-1"></i> Win/Mac/Linux</span>
                     <span><i class="fas fa-shield-alt text-success me-1"></i> 100% Local</span>
@@ -261,158 +359,146 @@
                 </div>
             </div>
             <div class="col-lg-5 text-center">
-                <div class="p-4 bg-white rounded-4 shadow-sm d-inline-block w-100">
-                    <i class="fas fa-code-commit fa-4x text-success mb-3"></i>
+                <div class="p-3 bg-white rounded-4 shadow-sm d-inline-block w-100">
+                    <i class="fas fa-code-commit fa-3x text-success mb-2"></i>
                     <p class="fw-semibold mb-2"><i class="fas fa-globe me-1"></i> global CLI · <i class="fas fa-chart-line"></i> progress bar</p>
-                    <div class="progress mt-2" style="height: 8px; width: 100%;">
+                    <div class="progress mt-2" style="height: 6px; width: 100%;">
                         <div class="progress-bar bg-success" style="width: 84%"></div>
                     </div>
-                    <div class="mt-3"><code style="background:#eef5f1;">fahim-commit --count 5</code></div>
+                    <div class="mt-2"><code style="background:#eef5f1; font-size:0.8rem;">fahim-commit --count 5</code></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container py-5">
+<div class="container py-4">
     <!-- Features Section -->
-    <section id="features" class="mb-5 pt-4">
+    <section id="features" class="mb-4 pt-3">
         <div class="section-header text-center">
-            <h2 class="display-6 fw-semibold"><i class="fas fa-gem me-3"></i>Core <span style="color: var(--primary);">Features</span></h2>
+            <h2 class="display-6 fw-semibold"><i class="fas fa-gem me-2"></i>Core <span style="color: var(--primary);">Features</span></h2>
             <p class="text-muted">Engineered for developers who value speed and transparency</p>
         </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-language"></i></div><h3 class="h5 fw-bold"><i class="fas fa-check-circle me-1"></i> 50+ Language Support</h3><p class="text-secondary">Python, JavaScript, TypeScript, Java, C++, Go, Rust, Kotlin, Swift, PHP, Ruby, Assembly, Dart & many more.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-chart-line"></i></div><h3 class="h5 fw-bold"><i class="fas fa-spinner me-1"></i> ASCII Progress Bar</h3><p class="text-secondary">Real‑time visual feedback during commit batches. Smooth & professional terminal animation with percentage and commit counter.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-pen-ruler"></i></div><h3 class="h5 fw-bold"><i class="fas fa-message me-1"></i> Custom Message Template</h3><p class="text-secondary"><code>--message "Commit {iteration} at {time}"</code> → dynamic placeholders supported.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-flask"></i></div><h3 class="h5 fw-bold"><i class="fas fa-eye me-1"></i> Dry‑Run Mode</h3><p class="text-secondary"><code>--dry-run</code> — simulate full workflow without modifying repo.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-hourglass-half"></i></div><h3 class="h5 fw-bold"><i class="fas fa-sliders-h me-1"></i> Custom Delay Range</h3><p class="text-secondary"><code>--min-delay</code> / <code>--max-delay</code> → control pacing, avoid API limits.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-hand-peace"></i></div><h3 class="h5 fw-bold"><i class="fas fa-ban me-1"></i> Safe Ctrl+C Exit</h3><p class="text-secondary">Graceful interruption, no partial commits left behind.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-globe"></i></div><h3 class="h5 fw-bold"><i class="fas fa-terminal me-1"></i> Global CLI Command</h3><p class="text-secondary">Use <code>fahim-commit</code> instantly in any Git repository.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-server"></i></div><h3 class="h5 fw-bold"><i class="fas fa-shield-heart me-1"></i> Zero External Servers</h3><p class="text-secondary">No telemetry, no data collection — runs 100% locally.</p></div></div>
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-language"></i></div><h3 class="h6 fw-bold">50+ Language Support</h3><p class="small text-secondary">Python, JavaScript, TypeScript, Java, C++, Go, Rust, Kotlin, Swift, PHP, Ruby, Assembly & many more.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-chart-line"></i></div><h3 class="h6 fw-bold">ASCII Progress Bar</h3><p class="small text-secondary">Real‑time visual feedback during commit batches. Smooth terminal animation.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-pen-ruler"></i></div><h3 class="h6 fw-bold">Custom Message Template</h3><p class="small text-secondary"><code>--message "Commit {iteration} at {time}"</code> → dynamic placeholders.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-flask"></i></div><h3 class="h6 fw-bold">Dry‑Run Mode</h3><p class="small text-secondary"><code>--dry-run</code> — simulate without modifying repo.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-hourglass-half"></i></div><h3 class="h6 fw-bold">Custom Delay Range</h3><p class="small text-secondary"><code>--min-delay</code> / <code>--max-delay</code> → control pacing.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-hand-peace"></i></div><h3 class="h6 fw-bold">Safe Ctrl+C Exit</h3><p class="small text-secondary">Graceful interruption, no partial commits.</p></div></div>
         </div>
     </section>
 
-    <!-- Installation Guide with All Commands -->
-    <section id="install" class="mb-5 pt-3">
-        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-download me-3"></i>Installation <span style="color: var(--primary);">Guide</span></h2></div>
+    <!-- Installation Guide - WORKING COPY BUTTONS -->
+    <section id="install" class="mb-4 pt-2">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-download me-2"></i>Installation <span style="color: var(--primary);">Guide</span></h2></div>
         <div class="code-window">
-            <i class="fab fa-python me-2"></i> <strong>Installation & Package Management</strong><br><br>
-            <span class="text-info"># Install</span><br>
-            $ pip install fahim-autocommit<br><br>
-            <span class="text-info"># Upgrade to latest version</span><br>
-            $ pip install --upgrade fahim-autocommit<br><br>
-            <span class="text-info"># Uninstall</span><br>
-            $ pip uninstall fahim-autocommit<br><br>
-            <span class="text-info"># Show installed version details</span><br>
-            $ pip show fahim-autocommit<br><br>
-            <span class="text-light-emphasis d-block mt-2"><i class="fas fa-check-circle text-success"></i> Requires Python 3.8+ and Git installed globally.</span>
+            <div class="command-block">
+                <span class="command-text"><span class="prompt">$</span> pip install fahim-autocommit</span>
+                <button class="copy-cmd-btn" data-cmd="pip install fahim-autocommit"><i class="fas fa-copy me-1"></i> Copy</button>
+            </div>
+            <div class="command-block">
+                <span class="command-text"><span class="prompt">$</span> pip install --upgrade fahim-autocommit</span>
+                <button class="copy-cmd-btn" data-cmd="pip install --upgrade fahim-autocommit"><i class="fas fa-copy me-1"></i> Copy</button>
+            </div>
+            <div class="command-block">
+                <span class="command-text"><span class="prompt">$</span> pip uninstall fahim-autocommit</span>
+                <button class="copy-cmd-btn" data-cmd="pip uninstall fahim-autocommit"><i class="fas fa-copy me-1"></i> Copy</button>
+            </div>
+            <div class="command-block">
+                <span class="command-text"><span class="prompt">$</span> pip show fahim-autocommit</span>
+                <button class="copy-cmd-btn" data-cmd="pip show fahim-autocommit"><i class="fas fa-copy me-1"></i> Copy</button>
+            </div>
+            <div class="mt-2 text-muted small"><i class="fas fa-info-circle"></i> Requires Python 3.8+ and Git installed globally.</div>
         </div>
     </section>
 
-    <!-- Quick Start Guide with exact commands -->
-    <section id="quickstart" class="mb-5">
-        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-bolt me-3"></i>Quick Start <span style="color: var(--primary);">Examples</span></h2></div>
+    <!-- Quick Start Guide - WORKING COPY BUTTONS -->
+    <section id="quickstart" class="mb-4">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-bolt me-2"></i>Quick Start <span style="color: var(--primary);">Examples</span></h2></div>
         <div class="code-window">
-            <i class="fas fa-code me-2"></i> <strong>Basic Usage (Required)</strong><br>
-            $ fahim-commit --count 10<br><br>
-            
-            <i class="fas fa-clock me-2"></i> <strong>Custom Delay Options</strong><br>
-            $ fahim-commit --count 10 --min-delay 1<br>
-            $ fahim-commit --count 10 --max-delay 3<br>
-            $ fahim-commit --count 20 --min-delay 1 --max-delay 2<br><br>
-            
-            <i class="fas fa-edit me-2"></i> <strong>Custom Commit Messages</strong><br>
-            $ fahim-commit --count 5 --message "Commit {iteration} at {time}"<br>
-            $ fahim-commit --count 5 --message "Updated {file} on {time}"<br><br>
-            
-            <i class="fas fa-flask me-2"></i> <strong>Dry Run Mode (Simulation Only)</strong><br>
-            $ fahim-commit --count 5 --dry-run<br><br>
-            
-            <i class="fas fa-star me-2"></i> <strong>Advanced Full Example</strong><br>
-            $ fahim-commit --count 25 --min-delay 1 --max-delay 3 --message "Modified {file} at {time}"<br><br>
-            
-            <i class="fas fa-question-circle me-2"></i> <strong>Show Help</strong><br>
-            $ fahim-commit --help
+            <div class="command-block"><span class="command-text"><span class="prompt">$</span> fahim-commit --count 10</span><button class="copy-cmd-btn" data-cmd="fahim-commit --count 10"><i class="fas fa-copy me-1"></i> Copy</button></div>
+            <div class="command-block"><span class="command-text"><span class="prompt">$</span> fahim-commit --count 10 --min-delay 1</span><button class="copy-cmd-btn" data-cmd="fahim-commit --count 10 --min-delay 1"><i class="fas fa-copy me-1"></i> Copy</button></div>
+            <div class="command-block"><span class="command-text"><span class="prompt">$</span> fahim-commit --count 10 --max-delay 3</span><button class="copy-cmd-btn" data-cmd="fahim-commit --count 10 --max-delay 3"><i class="fas fa-copy me-1"></i> Copy</button></div>
+            <div class="command-block"><span class="command-text"><span class="prompt">$</span> fahim-commit --count 20 --min-delay 1 --max-delay 2</span><button class="copy-cmd-btn" data-cmd="fahim-commit --count 20 --min-delay 1 --max-delay 2"><i class="fas fa-copy me-1"></i> Copy</button></div>
+            <div class="command-block"><span class="command-text"><span class="prompt">$</span> fahim-commit --count 5 --message "Commit {iteration} at {time}"</span><button class="copy-cmd-btn" data-cmd="fahim-commit --count 5 --message 'Commit {iteration} at {time}'"><i class="fas fa-copy me-1"></i> Copy</button></div>
+            <div class="command-block"><span class="command-text"><span class="prompt">$</span> fahim-commit --count 5 --message "Updated {file} on {time}"</span><button class="copy-cmd-btn" data-cmd="fahim-commit --count 5 --message 'Updated {file} on {time}'"><i class="fas fa-copy me-1"></i> Copy</button></div>
+            <div class="command-block"><span class="command-text"><span class="prompt">$</span> fahim-commit --count 5 --dry-run</span><button class="copy-cmd-btn" data-cmd="fahim-commit --count 5 --dry-run"><i class="fas fa-copy me-1"></i> Copy</button></div>
+            <div class="command-block"><span class="command-text"><span class="prompt">$</span> fahim-commit --count 25 --min-delay 1 --max-delay 3 --message "Modified {file} at {time}"</span><button class="copy-cmd-btn" data-cmd="fahim-commit --count 25 --min-delay 1 --max-delay 3 --message 'Modified {file} at {time}'"><i class="fas fa-copy me-1"></i> Copy</button></div>
+            <div class="command-block"><span class="command-text"><span class="prompt">$</span> fahim-commit --help</span><button class="copy-cmd-btn" data-cmd="fahim-commit --help"><i class="fas fa-copy me-1"></i> Copy</button></div>
         </div>
     </section>
 
-    <!-- CLI Options Table (updated to match exact flags) -->
-    <section id="cli-options" class="mb-5">
-        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-keyboard me-3"></i>CLI <span style="color: var(--primary);">Options</span></h2></div>
+    <!-- CLI Options Table - Responsive -->
+    <section id="cli-options" class="mb-4">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-keyboard me-2"></i>CLI <span style="color: var(--primary);">Options</span></h2></div>
         <div class="table-responsive">
             <table class="table table-premium table-bordered bg-white">
-                <thead class="table-light"><tr><th><i class="fas fa-flag me-1"></i> Flag</th><th><i class="fas fa-info-circle me-1"></i> Description</th><th><i class="fas fa-chart-simple me-1"></i> Default</th><th><i class="fas fa-code me-1"></i> Example</th></tr></thead>
+                <thead class="table-light"><tr><th>Flag</th><th>Description</th><th>Default</th><th>Example</th></tr></thead>
                 <tbody>
                     <tr><td><code>--count</code></td><td>Number of commits to generate & push</td><td>Required</td><td><code>--count 10</code></td></tr>
                     <tr><td><code>--min-delay</code></td><td>Minimum seconds between commits</td><td>1</td><td><code>--min-delay 1</code></td></tr>
                     <tr><td><code>--max-delay</code></td><td>Maximum seconds between commits</td><td>3</td><td><code>--max-delay 5</code></td></tr>
-                    <tr><td><code>--message</code></td><td>Custom commit message with dynamic placeholders ({iteration}, {time}, {file})</td><td>"Auto commit"</td><td><code>--message "Commit {iteration}"</code></td></tr>
-                    <tr><td><code>--dry-run</code></td><td>Preview only – no real commits or push</td><td>False</td><td><code>--dry-run</code></td></tr>
+                    <tr><td><code>--message</code></td><td>Custom commit message with {iteration}, {time}, {file}</td><td>"Auto commit"</td><td><code>--message "Commit {iteration}"</code></td></tr>
+                    <tr><td><code>--dry-run</code></td><td>Preview only – no real commits</td><td>False</td><td><code>--dry-run</code></td></tr>
                 </tbody>
             </table>
-        </div>
-        <div class="alert alert-light mt-3 border-start border-4 border-success">
-            <i class="fas fa-info-circle text-success me-2"></i> <strong>Dynamic Placeholders:</strong> Use <code>{iteration}</code>, <code>{time}</code>, <code>{file}</code> in your message template for personalized commits.
         </div>
     </section>
 
     <!-- Live Terminal Output -->
-    <section id="example-output" class="mb-5">
-        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-display me-3"></i>Real <span style="color: var(--primary);">Terminal Output</span></h2></div>
+    <section id="example-output" class="mb-4">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-display me-2"></i>Real <span style="color: var(--primary);">Terminal Output</span></h2></div>
         <div class="terminal-preview">
-            <i class="fas fa-terminal me-2"></i> ╔════════════════════════════════════════════════════════╗<br>
+            ╔════════════════════════════════════════════════════════╗<br>
             ║   🚀 FAHIM AUTO COMMIT — Professional Git Automator     ║<br>
             ║   version 2.1.0  | 50+ language detection active        ║<br>
             ╚════════════════════════════════════════════════════════╝<br>
-            <i class="fas fa-folder-open me-2"></i> Repository: /workspace/awesome-project<br>
-            <i class="fas fa-code me-2"></i> Languages: Python, JavaScript, HTML<br>
-            <i class="fas fa-gear me-2"></i> Preparing 5 commits with delays 1s-3s<br>
+            🔍 Repository: /workspace/awesome-project<br>
+            📦 Languages: Python, JavaScript, HTML<br>
+            ⚙️  Preparing 5 commits with delays 1s-3s<br>
             [████████████████████████░░░░░░] 60%  (3/5 commits)<br>
-            <i class="fas fa-check-circle text-success me-2"></i> Commit #3 | message: "Updated main.py on 15:30:22"<br>
-            <i class="fas fa-rocket me-2"></i> Pushing to origin/main ... done.<br>
+            ✅ Commit #3 | message: "Updated main.py on 15:30:22"<br>
+            🚀 Pushing to origin/main ... done.<br>
             [██████████████████████████████] 100%  Success!<br>
-            <i class="fas fa-star me-2"></i> 5 commits successfully pushed.<br>
+            ✨ 5 commits successfully pushed.<br>
             -------------------------------------------------<br>
-            <strong><i class="fas fa-crown me-1"></i> Powered By Programmer Fahim</strong> — automation with integrity.<br>
-            <i class="fas fa-clock me-1"></i> Total time: 8.4 seconds
+            <strong>Powered By Programmer Fahim</strong> — automation with integrity.
         </div>
     </section>
 
-    <!-- Supported Languages Cloud -->
-    <section id="languages" class="mb-5">
-        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-globe me-3"></i>50+ <span style="color: var(--primary);">Languages</span> Supported</h2></div>
-        <div class="lang-cloud text-center p-3">
-            <span><i class="fab fa-python me-1"></i> Python</span><span><i class="fab fa-js me-1"></i> JavaScript</span><span><i class="fab fa-js me-1"></i> TypeScript</span><span><i class="fab fa-java me-1"></i> Java</span><span><i class="fas fa-code me-1"></i> C</span><span><i class="fas fa-code me-1"></i> C++</span><span><i class="fas fa-code me-1"></i> C#</span><span><i class="fab fa-golang me-1"></i> Go</span><span><i class="fas fa-cogs me-1"></i> Rust</span><span><i class="fab fa-android me-1"></i> Kotlin</span><span><i class="fab fa-swift me-1"></i> Swift</span><span><i class="fab fa-php me-1"></i> PHP</span><span><i class="fab fa-ruby me-1"></i> Ruby</span><span><i class="fas fa-database me-1"></i> SQL</span><span><i class="fab fa-html5 me-1"></i> HTML5</span><span><i class="fab fa-css3-alt me-1"></i> CSS3</span><span><i class="fas fa-chart-line me-1"></i> YAML</span><span><i class="fas fa-microchip me-1"></i> Assembly</span><span><i class="fab fa-sass me-1"></i> SCSS</span><span><i class="fas fa-terminal me-1"></i> Shell</span>
-            <div class="mt-4 text-muted"><i class="fas fa-infinity me-2"></i> + any language — universal detection engine.</div>
+    <!-- Supported Languages -->
+    <section id="languages" class="mb-4">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-globe me-2"></i>50+ <span style="color: var(--primary);">Languages</span> Supported</h2></div>
+        <div class="lang-cloud text-center p-2">
+            <span><i class="fab fa-python"></i> Python</span><span><i class="fab fa-js"></i> JavaScript</span><span><i class="fab fa-js"></i> TypeScript</span><span><i class="fab fa-java"></i> Java</span><span><i class="fas fa-code"></i> C</span><span><i class="fas fa-code"></i> C++</span><span><i class="fab fa-golang"></i> Go</span><span><i class="fas fa-cogs"></i> Rust</span><span><i class="fab fa-swift"></i> Swift</span><span><i class="fab fa-php"></i> PHP</span><span><i class="fab fa-ruby"></i> Ruby</span><span><i class="fas fa-database"></i> SQL</span><span><i class="fab fa-html5"></i> HTML5</span><span><i class="fab fa-css3-alt"></i> CSS3</span>
+            <div class="mt-3 text-muted small"><i class="fas fa-infinity me-1"></i> + any language — universal detection engine.</div>
         </div>
     </section>
 
-    <!-- Security & Safety -->
-    <section id="security" class="mb-5">
-        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-shield-alt me-3"></i>Security & <span style="color: var(--primary);">Safety</span></h2></div>
-        <div class="row g-4">
-            <div class="col-md-3"><div class="feature-card text-center"><i class="fas fa-server fa-3x text-success mb-3"></i><h5><i class="fas fa-check-circle me-1"></i> No external servers</h5><p class="small">Runs 100% local. Zero outbound data.</p></div></div>
-            <div class="col-md-3"><div class="feature-card text-center"><i class="fas fa-chart-line fa-3x text-success mb-3"></i><h5><i class="fas fa-ban me-1"></i> No telemetry</h5><p class="small">Absolutely no data collection or tracking.</p></div></div>
-            <div class="col-md-3"><div class="feature-card text-center"><i class="fas fa-key fa-3x text-success mb-3"></i><h5><i class="fas fa-lock me-1"></i> No GitHub token required</h5><p class="small">Works with any remote via local git credentials.</p></div></div>
-            <div class="col-md-3"><div class="feature-card text-center"><i class="fas fa-folder-tree fa-3x text-success mb-3"></i><h5><i class="fas fa-shield me-1"></i> Safe inside repos</h5><p class="small">Only operates inside existing Git projects + --dry-run safeguard.</p></div></div>
+    <!-- Security -->
+    <section id="security" class="mb-4">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-shield-alt me-2"></i>Security & <span style="color: var(--primary);">Safety</span></h2></div>
+        <div class="row g-3">
+            <div class="col-md-3 col-6"><div class="feature-card text-center"><i class="fas fa-server fa-2x text-success mb-2"></i><h6 class="small fw-bold">No external servers</h6><p class="small">100% local. Zero outbound data.</p></div></div>
+            <div class="col-md-3 col-6"><div class="feature-card text-center"><i class="fas fa-chart-line fa-2x text-success mb-2"></i><h6 class="small fw-bold">No telemetry</h6><p class="small">Absolutely no data collection.</p></div></div>
+            <div class="col-md-3 col-6"><div class="feature-card text-center"><i class="fas fa-key fa-2x text-success mb-2"></i><h6 class="small fw-bold">No GitHub token</h6><p class="small">Works with local git credentials.</p></div></div>
+            <div class="col-md-3 col-6"><div class="feature-card text-center"><i class="fas fa-folder-tree fa-2x text-success mb-2"></i><h6 class="small fw-bold">Safe inside repos</h6><p class="small">Only inside Git projects + --dry-run.</p></div></div>
         </div>
     </section>
 
-    <!-- FAQ Accordion -->
-    <section id="faq" class="mb-5">
-        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-circle-question me-3"></i>Frequently Asked <span style="color: var(--primary);">Questions</span></h2></div>
+    <!-- FAQ -->
+    <section id="faq" class="mb-4">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-circle-question me-2"></i>FAQ</h2></div>
         <div class="accordion" id="faqAccordion">
-            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"><i class="fab fa-windows me-3 fa-fw"></i> Does it work on Windows?</button></h2><div id="faq1" class="accordion-collapse collapse show"><div class="accordion-body"><i class="fas fa-check-circle text-success me-2"></i>Yes, fully supported on Windows 10/11 via CMD, PowerShell, or Git Bash.</div></div></div>
-            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"><i class="fab fa-apple me-3 fa-fw"></i> Mac / Linux compatibility?</button></h2><div id="faq2" class="accordion-collapse collapse"><div class="accordion-body"><i class="fab fa-ubuntu me-2"></i>Absolutely. Native on macOS & all Linux distributions.</div></div></div>
-            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"><i class="fas fa-message me-3 fa-fw"></i> Can I customize commit messages?</button></h2><div id="faq3" class="accordion-collapse collapse"><div class="accordion-body">Yes! Use <code>--message "Your template {iteration} at {time}"</code>. Supports dynamic placeholders.</div></div></div>
-            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4"><i class="fas fa-shield-alt me-3 fa-fw"></i> Is it safe for production repos?</button></h2><div id="faq4" class="accordion-collapse collapse"><div class="accordion-body">Yes — always test with <code>--dry-run</code> first. It never deletes files.</div></div></div>
-            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5"><i class="fas fa-code-branch me-3 fa-fw"></i> Does it modify actual source code?</button></h2><div id="faq5" class="accordion-collapse collapse"><div class="accordion-body">No. Only creates commits based on existing changes. Never alters code logic.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1"><i class="fab fa-windows me-2"></i> Works on Windows?</button></h2><div id="faq1" class="collapse show"><div class="accordion-body small">Yes, fully supported on Windows 10/11 via CMD, PowerShell, or Git Bash.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2"><i class="fab fa-apple me-2"></i> Mac / Linux?</button></h2><div id="faq2" class="collapse"><div class="accordion-body small">Absolutely. Native on macOS & all Linux distributions.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3"><i class="fas fa-message me-2"></i> Custom messages?</button></h2><div id="faq3" class="collapse"><div class="accordion-body small">Yes, use <code>--message</code> with placeholders {iteration}, {time}, {file}.</div></div></div>
         </div>
     </section>
 
-    <!-- About Author -->
-  <section id="author" class="mb-5">
+    <!-- About Author - UPDATED with your image link -->
+    <section id="author" class="mb-5">
         <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-user-astronaut me-3"></i>About the <span style="color: var(--primary);">Creator</span></h2></div>
         <div class="author-card-premium d-flex flex-column flex-md-row align-items-center gap-5">
             <img src="./assets/my-dp-main.jpeg" alt="Programmer Fahim" class="author-img-circle">
@@ -431,29 +517,105 @@
     </section>
 </div>
 
-<footer class="text-center py-5">
-    <p class="mb-0"><i class="fas fa-copyright me-1"></i> 2025 Fahim Auto Commit · MIT Licensed · Universal Git CLI Tool</p>
-    <small class="text-muted"><i class="fas fa-heart text-success me-1"></i> No tracking, full local automation — Made by Programmer Fahim</small>
+<footer class="text-center py-4">
+    <p class="mb-0 small">© 2025 Fahim Auto Commit · MIT Licensed · Universal Git CLI Tool</p>
+    <small class="text-muted"><i class="fas fa-heart text-success"></i> No tracking, full local automation — Made by Programmer Fahim</small>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    const copyBtn = document.getElementById('premiumCopyBtn');
-    const installCmdSpan = document.getElementById('dynamicInstallCmd');
-    function showToastMessage(msg) {
-        let toastDiv = document.createElement('div');
-        toastDiv.className = 'position-fixed bottom-0 end-0 m-3 bg-success text-white p-2 px-4 rounded-pill shadow';
-        toastDiv.style.zIndex = '9999';
-        toastDiv.innerHTML = `<i class="fas fa-copy me-2"></i>${msg}`;
-        document.body.appendChild(toastDiv);
-        setTimeout(() => toastDiv.remove(), 2000);
+    // Toast notification function
+    function showToast(message) {
+        const existingToast = document.querySelector('.toast-notification');
+        if(existingToast) existingToast.remove();
+        
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification';
+        toast.innerHTML = `<i class="fas fa-check-circle me-2"></i> ${message}`;
+        document.body.appendChild(toast);
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 300);
+        }, 2000);
     }
-    if(copyBtn) {
-        copyBtn.addEventListener('click', () => {
+
+    // Fix: Copy buttons for all command blocks - PERFECTLY WORKING
+    document.querySelectorAll('.copy-cmd-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const command = this.getAttribute('data-cmd');
+            if(command) {
+                // Try multiple clipboard methods
+                if(navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(command).then(() => {
+                        const originalHtml = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check me-1"></i> Copied!';
+                        showToast('✓ Command copied to clipboard');
+                        setTimeout(() => {
+                            this.innerHTML = originalHtml;
+                        }, 1500);
+                    }).catch(() => {
+                        fallbackCopy(command, this);
+                    });
+                } else {
+                    fallbackCopy(command, this);
+                }
+            }
+        });
+    });
+
+    // Fallback copy method for older browsers
+    function fallbackCopy(text, buttonElement) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.top = '-9999px';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        textarea.setSelectionRange(0, textarea.value.length);
+        try {
+            const successful = document.execCommand('copy');
+            if(successful) {
+                const originalHtml = buttonElement.innerHTML;
+                buttonElement.innerHTML = '<i class="fas fa-check me-1"></i> Copied!';
+                showToast('✓ Command copied to clipboard');
+                setTimeout(() => {
+                    buttonElement.innerHTML = originalHtml;
+                }, 1500);
+            } else {
+                showToast('⚠️ Please copy manually');
+            }
+        } catch (err) {
+            showToast('⚠️ Press Ctrl+C to copy');
+        }
+        document.body.removeChild(textarea);
+    }
+
+    // Hero section copy button
+    const heroCopyBtn = document.getElementById('premiumCopyBtn');
+    const installCmdSpan = document.getElementById('dynamicInstallCmd');
+    if(heroCopyBtn) {
+        heroCopyBtn.addEventListener('click', function(e) {
+            e.preventDefault();
             let text = installCmdSpan.innerText;
-            navigator.clipboard.writeText(text).then(() => showToastMessage('✅ pip command copied!')).catch(() => alert('Manual copy'));
+            if(navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalHtml = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    showToast('✓ pip command copied!');
+                    setTimeout(() => { this.innerHTML = originalHtml; }, 1500);
+                }).catch(() => {
+                    fallbackCopy(text, this);
+                });
+            } else {
+                fallbackCopy(text, this);
+            }
         });
     }
+
+    // Smooth scroll for navigation links
     document.querySelectorAll('.dropdown-item, .nav-link').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             let target = this.getAttribute('href');

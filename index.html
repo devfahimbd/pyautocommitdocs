@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Fahim Auto Commit | Professional Git Automation CLI</title>
+    <!-- Bootstrap 5 CSS + Font Awesome 6 + Google Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1a2f2a;
+            scroll-behavior: smooth;
+        }
+        :root {
+            --primary: #1e7a4a;
+            --primary-dark: #0f5a37;
+            --primary-light: #eafaf1;
+            --primary-soft: #d4f0e2;
+            --accent: #2b9b60;
+            --gray-bg: #fafefb;
+            --shadow-premium: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
+            --border-soft: #e2f0e8;
+        }
+        /* premium navbar */
+        .navbar-premium {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02), 0 8px 20px rgba(0,0,0,0.03);
+            padding: 0.7rem 0;
+            transition: all 0.2s;
+        }
+        .logo-icon {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-soft));
+            width: 44px;
+            height: 44px;
+            border-radius: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--primary);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+        }
+        .btn-premium {
+            background: var(--primary);
+            border: none;
+            border-radius: 44px;
+            padding: 8px 26px;
+            font-weight: 600;
+            color: white;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(30,122,74,0.2);
+        }
+        .btn-premium:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(30,122,74,0.25);
+        }
+        .btn-outline-premium {
+            border: 1.5px solid var(--primary);
+            background: transparent;
+            border-radius: 44px;
+            padding: 7px 22px;
+            font-weight: 500;
+            color: var(--primary);
+            transition: 0.2s;
+        }
+        .btn-outline-premium:hover {
+            background: var(--primary-light);
+            transform: translateY(-1px);
+        }
+        .hero-premium {
+            background: radial-gradient(ellipse at 20% 30%, rgba(220, 245, 230, 0.5), #ffffff);
+            padding: 90px 0 80px;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .install-chip {
+            background: #112e24;
+            border-radius: 80px;
+            padding: 14px 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: var(--shadow-premium);
+            backdrop-filter: blur(2px);
+        }
+        .feature-card {
+            background: white;
+            border-radius: 28px;
+            padding: 30px 24px;
+            transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+            border: 1px solid rgba(0,0,0,0.03);
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-soft);
+            box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.08);
+            background: #ffffff;
+        }
+        .code-window {
+            background: #0f201c;
+            border-radius: 28px;
+            padding: 28px;
+            color: #caf0e3;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-premium);
+            border: 1px solid #1f3a32;
+        }
+        .terminal-preview {
+            background: #0b1815;
+            border-radius: 28px;
+            padding: 30px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #c9f0e1;
+            border-left: 4px solid var(--primary);
+        }
+        .lang-cloud span {
+            background: #ecf9f0;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            margin: 8px;
+            display: inline-block;
+            font-weight: 500;
+            color: #1c5a3e;
+            transition: 0.1s;
+        }
+        .author-card-premium {
+            background: linear-gradient(125deg, #f5fef9, #ffffff);
+            border-radius: 48px;
+            padding: 38px;
+            box-shadow: var(--shadow-premium);
+            border: 1px solid #e2f0e8;
+        }
+        .author-img-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+        }
+        .dropdown-menu-premium {
+            border-radius: 24px;
+            border: none;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+            padding: 0.6rem 0;
+        }
+        .badge-premium {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 7px 18px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        .section-header {
+            margin-bottom: 48px;
+        }
+        .section-header h2 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #1a4d3a, var(--primary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        .table-premium {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .table-premium th {
+            background: #eef5f1;
+            border-bottom: none;
+            font-weight: 600;
+        }
+        footer {
+            background: #f8fdfa;
+            border-top: 1px solid #e6f0ea;
+        }
+        .icon-bg-round {
+            background: var(--primary-light);
+            width: 54px;
+            height: 54px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .icon-bg-round i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: var(--primary-soft);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Premium Navbar with Dropdown & icons -->
+<nav class="navbar navbar-expand-lg navbar-premium sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-3 fw-bold fs-3" href="#">
+            <div class="logo-icon"><i class="fas fa-code-branch"></i></div>
+            <span>Fahim <span style="color: var(--primary);">Auto Commit</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#premiumNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="premiumNavbar">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2">
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#features"><i class="fas fa-crown me-1"></i>Features</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#install"><i class="fas fa-download me-1"></i>Install</a></li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#quickstart"><i class="fas fa-bolt me-1"></i>Quick Start</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown"><i class="fas fa-globe me-1"></i>Resources</a>
+                    <ul class="dropdown-menu dropdown-menu-premium">
+                        <li><a class="dropdown-item" href="#cli-options"><i class="fas fa-table-list me-2"></i>CLI Options</a></li>
+                        <li><a class="dropdown-item" href="#example-output"><i class="fas fa-terminal me-2"></i>Live Demo</a></li>
+                        <li><a class="dropdown-item" href="#languages"><i class="fas fa-code me-2"></i>50+ Languages</a></li>
+                        <li><a class="dropdown-item" href="#faq"><i class="fas fa-circle-question me-2"></i>FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link fw-semibold" href="#author"><i class="fas fa-user-astronaut me-1"></i>Creator</a></li>
+            </ul>
+            <div class="d-flex">
+                <a href="https://pypi.org/project/fahim-autocommit/" target="_blank" class="btn btn-premium"><i class="fab fa-python me-2"></i>PyPI</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section with full icons -->
+<div class="hero-premium">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <div class="mb-3"><span class="badge-premium"><i class="fas fa-microchip me-2"></i>Next‑gen Git Automation · 50+ languages</span></div>
+                <h1 class="display-4 fw-bold" style="color: #0a2c21;"><i class="fas fa-robot me-3" style="color: var(--primary);"></i>Fahim Auto Commit</h1>
+                <p class="fs-3 text-dark-emphasis mb-3"><i class="fas fa-infinity me-2"></i>Universal Git automation CLI</p>
+                <p class="lead text-muted mb-4"><i class="fas fa-magic me-2"></i>Automatically create, manage and push commits with intelligent progress bars, custom templates, and bulletproof safety.</p>
+                <div class="install-chip">
+                    <i class="fas fa-terminal fa-xl" style="color:#bcf0dc;"></i>
+                    <code class="text-white fs-6" id="dynamicInstallCmd">pip install fahim-autocommit</code>
+                    <button class="btn btn-sm text-white" id="premiumCopyBtn"><i class="fas fa-copy fa-lg"></i></button>
+                </div>
+                <div class="mt-4 d-flex flex-wrap gap-4 justify-content-center justify-content-lg-start">
+                    <span><i class="fas fa-check-circle text-success me-1"></i> Python 3.8+</span>
+                    <span><i class="fab fa-windows text-primary me-1"></i> Win/Mac/Linux</span>
+                    <span><i class="fas fa-shield-alt text-success me-1"></i> 100% Local</span>
+                    <span><i class="fas fa-hand-peace me-1"></i> Safe Ctrl+C</span>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <div class="p-4 bg-white rounded-4 shadow-sm d-inline-block w-100">
+                    <i class="fas fa-code-commit fa-4x text-success mb-3"></i>
+                    <p class="fw-semibold mb-2"><i class="fas fa-globe me-1"></i> global CLI · <i class="fas fa-chart-line"></i> progress bar</p>
+                    <div class="progress mt-2" style="height: 8px; width: 100%;">
+                        <div class="progress-bar bg-success" style="width: 84%"></div>
+                    </div>
+                    <div class="mt-3"><i class="fas fa-terminal me-1"></i> fahim-autocommit --count 5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <!-- Features Section - Each card has professional icon (FIXED: ASCII Progress Bar & Zero External Servers icons added) -->
+    <section id="features" class="mb-5 pt-4">
+        <div class="section-header text-center">
+            <h2 class="display-6 fw-semibold"><i class="fas fa-gem me-3"></i>Core <span style="color: var(--primary);">Features</span></h2>
+            <p class="text-muted">Engineered for developers who value speed and transparency</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-language"></i></div><h3 class="h5 fw-bold"><i class="fas fa-check-circle me-1"></i> 50+ Language Support</h3><p class="text-secondary">Python, JavaScript, TypeScript, Java, C++, Go, Rust, Kotlin, Swift, PHP, Ruby, Assembly, Dart & many more.</p></div></div>
+            
+            <!-- Fixed: ASCII Progress Bar icon -->
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-chart-line"></i></div><h3 class="h5 fw-bold"><i class="fas fa-spinner me-1"></i> ASCII Progress Bar</h3><p class="text-secondary">Real‑time visual feedback during commit batches. Smooth & professional terminal animation with percentage and commit counter.</p></div></div>
+            
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-pen-ruler"></i></div><h3 class="h5 fw-bold"><i class="fas fa-message me-1"></i> Custom Message Template</h3><p class="text-secondary">--message "feat: ${dynamic}" → personalize each commit easily with placeholders.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-flask"></i></div><h3 class="h5 fw-bold"><i class="fas fa-eye me-1"></i> Dry‑Run Mode</h3><p class="text-secondary">Simulate full workflow without modifying repo — safe preview before execution.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-hourglass-half"></i></div><h3 class="h5 fw-bold"><i class="fas fa-sliders-h me-1"></i> Custom Delay Range</h3><p class="text-secondary">--min-delay / --max-delay → control pacing, avoid API limits, natural simulation.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-hand-peace"></i></div><h3 class="h5 fw-bold"><i class="fas fa-ban me-1"></i> Safe Ctrl+C Exit</h3><p class="text-secondary">Graceful interruption, no partial commits left behind — clean abort every time.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-globe"></i></div><h3 class="h5 fw-bold"><i class="fas fa-terminal me-1"></i> Global CLI Command</h3><p class="text-secondary">Use <code>fahim-autocommit</code> instantly in any Git repository after installation.</p></div></div>
+            
+            <!-- Fixed: Zero External Servers icon -->
+            <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="icon-bg-round"><i class="fas fa-server"></i></div><h3 class="h5 fw-bold"><i class="fas fa-shield-heart me-1"></i> Zero External Servers</h3><p class="text-secondary">No telemetry, no data collection — runs 100% locally with your Git credentials. Absolute privacy.</p></div></div>
+        </div>
+    </section>
+
+    <!-- Installation Guide -->
+    <section id="install" class="mb-5 pt-3">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-download me-3"></i>Installation <span style="color: var(--primary);">Guide</span></h2></div>
+        <div class="code-window">
+            <i class="fab fa-python me-2"></i> <strong>pip install — upgrade — remove</strong><br>
+            <span class="text-info">$ pip install fahim-autocommit</span><br>
+            <span class="text-info">$ pip install --upgrade fahim-autocommit</span><br>
+            <span class="text-info">$ pip uninstall fahim-autocommit</span><br>
+            <span class="text-light-emphasis mt-2 d-block"><i class="fas fa-check-circle text-success"></i> Requires Python 3.8+ and Git installed globally.</span>
+        </div>
+    </section>
+
+    <!-- Quick Start Examples -->
+    <section id="quickstart" class="mb-5">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-bolt me-3"></i>Quick Start <span style="color: var(--primary);">Examples</span></h2></div>
+        <div class="code-window">
+            <i class="fas fa-code me-2"></i> # Basic usage – 3 auto commits<br>
+            $ fahim-autocommit --count 3<br><br>
+            <i class="fas fa-clock me-2"></i> # With custom delay (2–5 seconds between commits)<br>
+            $ fahim-autocommit --count 5 --min-delay 2 --max-delay 5<br><br>
+            <i class="fas fa-edit me-2"></i> # Custom commit message template<br>
+            $ fahim-autocommit --count 2 --message "docs: update README + automation"<br><br>
+            <i class="fas fa-search me-2"></i> # Dry-run: see what would happen<br>
+            $ fahim-autocommit --count 4 --dry-run
+        </div>
+    </section>
+
+    <!-- CLI Options Table -->
+    <section id="cli-options" class="mb-5">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-keyboard me-3"></i>CLI <span style="color: var(--primary);">Options</span></h2></div>
+        <div class="table-responsive">
+            <table class="table table-premium table-bordered bg-white">
+                <thead class="table-light"><tr><th><i class="fas fa-flag me-1"></i> Flag</th><th><i class="fas fa-info-circle me-1"></i> Description</th><th><i class="fas fa-chart-simple me-1"></i> Default</th></tr></thead>
+                <tbody>
+                    <tr><td><code>--count</code></td><td>Number of commits to generate & push</td><td>1</td></tr>
+                    <tr><td><code>--min-delay</code></td><td>Minimum seconds between commits</td><td>1</td></tr>
+                    <tr><td><code>--max-delay</code></td><td>Maximum seconds between commits</td><td>3</td></tr>
+                    <tr><td><code>--message</code></td><td>Custom commit message (supports dynamic placeholders)</td><td>"Auto commit: automated update"</td></tr>
+                    <tr><td><code>--dry-run</code></td><td>Preview only – no real commits or push</td><td>False</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Live Terminal Output -->
+    <section id="example-output" class="mb-5">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-display me-3"></i>Real <span style="color: var(--primary);">Terminal Output</span></h2></div>
+        <div class="terminal-preview">
+            <i class="fas fa-terminal me-2"></i> ╔════════════════════════════════════════════════════════╗<br>
+            ║   🚀 FAHIM AUTO COMMIT — Professional Git Automator     ║<br>
+            ║   version 2.1.0  | 50+ language detection active        ║<br>
+            ╚════════════════════════════════════════════════════════╝<br>
+            <i class="fas fa-folder-open me-2"></i> Repository: /workspace/nextgen-app<br>
+            <i class="fas fa-code me-2"></i> Languages: TypeScript, Python, SCSS<br>
+            <i class="fas fa-gear me-2"></i> Preparing 4 commits with delays 1s-4s<br>
+            [████████████████████████░░░░░░] 75%  (3/4 commits)<br>
+            <i class="fas fa-check-circle text-success me-2"></i> Commit #3 | message: "feat: integrate auto commit workflow"<br>
+            <i class="fas fa-rocket me-2"></i> Pushing to origin/main ... done.<br>
+            [██████████████████████████████] 100%  Success!<br>
+            <i class="fas fa-star me-2"></i> All commits processed & pushed.<br>
+            -------------------------------------------------<br>
+            <strong><i class="fas fa-crown me-1"></i> Powered By Programmer Fahim</strong> — automation with integrity.<br>
+        </div>
+    </section>
+
+    <!-- Supported Languages Cloud -->
+    <section id="languages" class="mb-5">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-globe me-3"></i>50+ <span style="color: var(--primary);">Languages</span> Supported</h2></div>
+        <div class="lang-cloud text-center p-3">
+            <span><i class="fab fa-python me-1"></i> Python</span><span><i class="fab fa-js me-1"></i> JavaScript</span><span><i class="fab fa-js me-1"></i> TypeScript</span><span><i class="fab fa-java me-1"></i> Java</span><span><i class="fas fa-code me-1"></i> C</span><span><i class="fas fa-code me-1"></i> C++</span><span><i class="fas fa-code me-1"></i> C#</span><span><i class="fab fa-golang me-1"></i> Go</span><span><i class="fas fa-cogs me-1"></i> Rust</span><span><i class="fab fa-android me-1"></i> Kotlin</span><span><i class="fab fa-swift me-1"></i> Swift</span><span><i class="fab fa-php me-1"></i> PHP</span><span><i class="fab fa-ruby me-1"></i> Ruby</span><span><i class="fas fa-database me-1"></i> SQL</span><span><i class="fab fa-html5 me-1"></i> HTML5</span><span><i class="fab fa-css3-alt me-1"></i> CSS3</span><span><i class="fas fa-chart-line me-1"></i> YAML</span><span><i class="fas fa-microchip me-1"></i> Assembly</span>
+            <div class="mt-4 text-muted"><i class="fas fa-infinity me-2"></i> + any language — universal detection engine.</div>
+        </div>
+    </section>
+
+    <!-- Security & Safety -->
+    <section id="security" class="mb-5">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-shield-alt me-3"></i>Security & <span style="color: var(--primary);">Safety</span></h2></div>
+        <div class="row g-4">
+            <div class="col-md-3"><div class="feature-card text-center"><i class="fas fa-server fa-3x text-success mb-3"></i><h5><i class="fas fa-check-circle me-1"></i> No external servers</h5><p class="small">Runs 100% local. Zero outbound data.</p></div></div>
+            <div class="col-md-3"><div class="feature-card text-center"><i class="fas fa-chart-line fa-3x text-success mb-3"></i><h5><i class="fas fa-ban me-1"></i> No telemetry</h5><p class="small">Absolutely no data collection or tracking.</p></div></div>
+            <div class="col-md-3"><div class="feature-card text-center"><i class="fas fa-key fa-3x text-success mb-3"></i><h5><i class="fas fa-lock me-1"></i> No GitHub token required</h5><p class="small">Works with any remote via local git credentials.</p></div></div>
+            <div class="col-md-3"><div class="feature-card text-center"><i class="fas fa-folder-tree fa-3x text-success mb-3"></i><h5><i class="fas fa-shield me-1"></i> Safe inside repos</h5><p class="small">Only operates inside existing Git projects + --dry-run safeguard.</p></div></div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion with icon integration -->
+    <section id="faq" class="mb-5">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-circle-question me-3"></i>Frequently Asked <span style="color: var(--primary);">Questions</span></h2></div>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"><i class="fab fa-windows me-3 fa-fw"></i> Does it work on Windows?</button></h2><div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body"><i class="fas fa-check-circle text-success me-2"></i>Yes, fully supported on Windows 10/11 via CMD, PowerShell, or Git Bash.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"><i class="fab fa-apple me-3 fa-fw"></i> Mac / Linux compatibility?</button></h2><div id="faq2" class="accordion-collapse collapse"><div class="accordion-body"><i class="fab fa-ubuntu me-2"></i>Absolutely. Native on macOS & all Linux distributions (Ubuntu, Debian, Fedora, Arch).</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"><i class="fas fa-message me-3 fa-fw"></i> Can I fully customize commit messages?</button></h2><div id="faq3" class="accordion-collapse collapse"><div class="accordion-body">Yes, use <code>--message "your custom message"</code>. Supports dynamic placeholders like timestamps and incremental counters.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4"><i class="fas fa-shield-alt me-3 fa-fw"></i> Is it safe for production repos?</button></h2><div id="faq4" class="accordion-collapse collapse"><div class="accordion-body">Yes, but we recommend <code>--dry-run</code> first. It never deletes files, only commits current changes.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5"><i class="fas fa-code-branch me-3 fa-fw"></i> Does it modify actual source code?</button></h2><div id="faq5" class="accordion-collapse collapse"><div class="accordion-body">No. It only creates commits based on existing unstaged/staged changes. Never rewrites or alters code logic.</div></div></div>
+        </div>
+    </section>
+
+    <!-- About Author with actual developer image link & icons -->
+    <section id="author" class="mb-5">
+        <div class="section-header"><h2 class="display-6 fw-semibold"><i class="fas fa-user-astronaut me-3"></i>About the <span style="color: var(--primary);">Creator</span></h2></div>
+        <div class="author-card-premium d-flex flex-column flex-md-row align-items-center gap-5">
+            <img src="./assets/my-dp-main.jpeg" alt="Programmer Fahim" class="author-img-circle">
+            <div>
+                <h3 class="fw-bold"><i class="fas fa-laptop-code me-2"></i>Programmer Fahim</h3>
+                <p class="text-muted"><i class="fas fa-award me-1"></i> Lead Developer & Open Source Architect</p>
+                <p>Fahim is a seasoned software engineer and automation expert. He created Fahim Auto Commit to eliminate repetitive Git workflows for developers worldwide. The tool emphasizes simplicity, transparency, and performance — trusted by thousands of engineers.</p>
+                <div class="d-flex gap-4 mt-3 flex-wrap">
+                    <span><i class="fab fa-github fs-5 me-2"></i> github.com/devfahimbd</span>
+                    <span><i class="fab fa-twitter fs-5 me-2"></i> @FahimWith20937</span>
+                    <span><i class="fas fa-envelope fs-5 me-2"></i> info@fahim.website</span>
+                </div>
+                <div class="mt-4 fw-semibold"><i class="fas fa-crown text-success me-2"></i> Powered By Programmer Fahim — built with passion for Git automation.</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="text-center py-5">
+    <p class="mb-0"><i class="fas fa-copyright me-1"></i> 2026 Fahim Auto Commit · MIT Licensed · Universal Git CLI Tool</p>
+    <small class="text-muted"><i class="fas fa-heart text-success me-1"></i> No tracking, full local automation — Made by Programmer Fahim</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const copyBtn = document.getElementById('premiumCopyBtn');
+    const installCmdSpan = document.getElementById('dynamicInstallCmd');
+    function showToastMessage(msg) {
+        let toastDiv = document.createElement('div');
+        toastDiv.className = 'position-fixed bottom-0 end-0 m-3 bg-success text-white p-2 px-4 rounded-pill shadow';
+        toastDiv.style.zIndex = '9999';
+        toastDiv.innerHTML = `<i class="fas fa-copy me-2"></i>${msg}`;
+        document.body.appendChild(toastDiv);
+        setTimeout(() => toastDiv.remove(), 2000);
+    }
+    if(copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            let text = installCmdSpan.innerText;
+            navigator.clipboard.writeText(text).then(() => showToastMessage('✅ pip command copied!')).catch(() => alert('Manual copy'));
+        });
+    }
+    document.querySelectorAll('.dropdown-item, .nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            let target = this.getAttribute('href');
+            if (target && target.startsWith('#') && target !== '#') {
+                e.preventDefault();
+                let el = document.querySelector(target);
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
